@@ -18,12 +18,12 @@
                 this[k] = v;
             }
             this.timers = {};
-            this.currentstate = 'init';
+            this.state = 'init';
             this.handleEvent('init');
         };
         handleEvent(event) {
-            if (event in this.states[this.currentstate]) {
-                this.states[this.currentstate][event].call(this);
+            if (event in this.states[this.state]) {
+                this.states[this.state][event].call(this);
             }
         };
         startTimer(timeout, event) {
