@@ -1,5 +1,4 @@
-(function (root, factory) {
-    'use strict';
+(function (root, factory) { 'use strict';
     if (typeof exports === 'object') {
         module.exports = factory();
     } else if (typeof define === 'function' && define.amd) {
@@ -7,15 +6,12 @@
     } else {
         root.Fsm = factory();
     }
-}(this, function () {
-    'use strict';
-
-    /**
+}(this, function () { 'use strict';
+   /**
      * Standalone, JavaScript implementation of a Finite State Machine.
      * Copyright (c) 2011-2019, Christof Elfferich
      *                                            All rights preserved.
      */
-
     class Fsm {
         constructor(statetable, config) {
             for (const [k, v] of Object.entries(statetable)) {
@@ -37,7 +33,7 @@
         };
         startTimer(timeout, event) {
             this.cancelTimer(event);
-            this.timers[event] = setTimeout(() => {
+            this.timers[event] = setTimeout(_ => {
                 delete(this.timers[event]);
                 this.handleEvent(event);
             }, timeout);
