@@ -11,9 +11,9 @@
     'use strict';
 
     /**
-     * A standalone JavaScript implementation of a Finite State Machine.
+     * A standalone, JavaScript implementation of a Finite State Machine.
      * Copyright (c) 2011-2019, Christof Elfferich
-     *                                             All rights preserved.
+     *                                              All rights preserved.
      */
 
     class Fsm {
