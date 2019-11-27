@@ -13,14 +13,9 @@
      *                                            All rights preserved.
      */
     class Fsm {
-        constructor(statetable, config) {
+        constructor(statetable) {
             for (const [k, v] of Object.entries(statetable)) {
                 this[k] = v;
-            }
-            if (config) {
-                for (const [k, v] of Object.entries(config)) {
-                    this[k] = v;
-                }
             }
             this.timers = {};
             this.currentstate = 'init';
