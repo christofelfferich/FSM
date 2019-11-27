@@ -34,7 +34,6 @@
             if (this.states[this.currentstate].hasOwnProperty(event)) {
                 this.states[this.currentstate][event].call(this, args);
             }
-            return this;
         };
         startTimer(timeout, event) {
             this.cancelTimer(event);
@@ -42,14 +41,12 @@
                 delete(this.timers[event]);
                 this.handleEvent(event);
             }, timeout);
-            return this;
         };
         cancelTimer(timername) {
             if (this.timers.hasOwnProperty(timername)) {
                 clearTimeout(this.timers[timername]);
                 delete(this.timers[timername]);
             }
-            return this;
         };
     };
     return Fsm;
