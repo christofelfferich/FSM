@@ -17,8 +17,7 @@
             for (const [k, v] of Object.entries(statetable)) {
                 this[k] = v;
             }
-            this.timers = {};
-            this.state = 'init';
+            this.timers = {}, this.state = 'init';
             this.handleEvent('init');
         };
         handleEvent(event) {
