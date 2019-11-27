@@ -27,7 +27,7 @@
             this.handleEvent('init');
         };
         handleEvent(event, args) {
-            if (this.states[this.currentstate].hasOwnProperty(event)) {
+            if (this.states[this.currentstate][event]) {
                 this.states[this.currentstate][event].call(this, args);
             }
         };
@@ -39,7 +39,7 @@
             }, timeout);
         };
         cancelTimer(timername) {
-            if (this.timers.hasOwnProperty(timername)) {
+            if (this.timers[timername]) {
                 clearTimeout(this.timers[timername]);
                 delete(this.timers[timername]);
             }
