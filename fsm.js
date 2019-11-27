@@ -26,9 +26,9 @@
             this.currentstate = 'init';
             this.handleEvent('init');
         };
-        handleEvent(event, args) {
-            if (this.states[this.currentstate][event]) {
-                this.states[this.currentstate][event].call(this, args);
+        handleEvent(event) {
+            if (event in this.states[this.currentstate]) {
+                this.states[this.currentstate][event].call(this);
             }
         };
         startTimer(timeout, event) {
@@ -39,7 +39,7 @@
             }, timeout);
         };
         cancelTimer(timername) {
-            if (this.timers[timername]) {
+            if (timername in this.timers) {
                 clearTimeout(this.timers[timername]);
                 delete(this.timers[timername]);
             }
