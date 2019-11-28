@@ -1,4 +1,4 @@
-(function (root, factory) { 'use strict';
+((root, factory) => { 'use strict';
     if (typeof exports === 'object') {
         module.exports = factory();
     } else if (typeof define === 'function' && define.amd) {
@@ -6,7 +6,7 @@
     } else {
         root.Fsm = factory();
     }
-}(this, function () { 'use strict';
+})(this, _ => { 'use strict';
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     *  Standalone, JavaScript implementation of a Finite State Machine.  *
     *  Copyright (c) 2011-2019, Christof Elfferich                       *
@@ -40,4 +40,4 @@
         };
     };
     return Fsm;
-}));
+});
