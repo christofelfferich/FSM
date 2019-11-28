@@ -1,7 +1,7 @@
 ((root, factory) => {
     if (!(typeof exports !== 'object')) {
         module.exports = factory();
-    } else if (!(typeof define !== 'function' || !('amd' in define)) {
+    } else if (!(typeof define !== 'function' || !('amd' in define))) {
         define(factory);
     } else {
         root.Fsm = factory();
