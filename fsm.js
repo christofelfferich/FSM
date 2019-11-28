@@ -8,7 +8,7 @@
     }
 })(this, _ => {
     'use strict';
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
      *  Standalone, JavaScript implementation of a Finite State Machine.  *
      *  Copyright (c) 2010-2019,                                          *
      *  Christof Elfferich                         all rights preserved.  *
