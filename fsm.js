@@ -19,25 +19,25 @@
                 this[k] = v;
             }
             this.timers = {}, this.state = 'init';
-            this.handleEvent('init');
-        };
+            this.handleEvent('init')
+        }
         handleEvent(event) {
             if (event in this.states[this.state]) {
                 this.states[this.state][event].call(this);
             }
-        };
+        }
         startTimer(timeout, event) {
-            this.cancelTimer(event);
+            this.cancelTimer(event)
             this.timers[event] = setTimeout(_ => {
                 delete(this.timers[event]);
-                this.handleEvent(event);
-            }, timeout);
-        };
+                this.handleEvent(event)
+            }, timeout)
+        }
         cancelTimer(timername) {
             if (timername in this.timers) {
                 clearTimeout(this.timers[timername]);
                 delete(this.timers[timername]);
             }
-        };
+        }
     };
 });
