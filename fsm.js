@@ -29,7 +29,7 @@
             }
         }
         startTimer(timeout, event) {
-            this.cancelTimer(event)
+            this.stopTimer(event)
             this.timers[event] = setTimeout(_ => {
                 delete(this.timers[event]);
                 this.handleEvent(event)
