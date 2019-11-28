@@ -35,10 +35,10 @@
                 this.handleEvent(event)
             }, timeout);
         }
-        cancelTimer(timername) {
-            if (this.timers[timername]) {
-                clearTimeout(this.timers[timername]);
-                delete(this.timers[timername]);
+        cancelTimer(event) {
+            if (this.timers[event]) {
+                clearTimeout(this.timers[event]);
+                delete(this.timers[event]);
             }
         }
     };
