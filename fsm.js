@@ -8,21 +8,23 @@
     }
 })(this, _ => {
     'use strict';
-     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
      *  Standalone, JavaScript implementation of a Finite State Machine.  *
      *  Copyright (c) 2010-2019,                                          *
      *  Christof Elfferich                         all rights preserved.  *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     return class Fsm {
         constructor(statetable) {
-            for (const [k, v] of Object.entries(statetable)) {
-                this[k] = v;
-            }
-            this.timers = {}, this.state = 'init';
+            this.states = statetable;
+            this.timers = {};
+            this.setState('init')
+        }
+        setState(state) {
+            this.state = state;
             this.handleEvent('init')
         }
         handleEvent(event) {
-            if (event in this.states[this.state]) {
+            if (this.states[this.state][event]) {
                 this.states[this.state][event].call(this);
             }
         }
@@ -34,7 +36,7 @@
             }, timeout);
         }
         cancelTimer(timername) {
-            if (timername in this.timers) {
+            if (this.timers[timername]) {
                 clearTimeout(this.timers[timername]);
                 delete(this.timers[timername]);
             }
