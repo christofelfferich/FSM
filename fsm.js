@@ -35,7 +35,7 @@
                 this.handleEvent(event)
             }, timeout);
         }
-        cancelTimer(event) {
+        stopTimer(event) {
             if (this.timers[event]) {
                 clearTimeout(this.timers[event]);
                 delete(this.timers[event]);
