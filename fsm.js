@@ -8,10 +8,10 @@
     }
 }(this, function () { 'use strict';
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-     * Standalone, JavaScript implementation of a Finite State Machine.  *
-     * Copyright (c) 2011-2019, Christof Elfferich                       *
-     *                                             All rights preserved. *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    *  Standalone, JavaScript implementation of a Finite State Machine.  *
+    *  Copyright (c) 2011-2019, Christof Elfferich                       *
+    *                                             All rights preserved.  *
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     class Fsm {
         constructor(statetable) {
             for (const [k, v] of Object.entries(statetable)) {
