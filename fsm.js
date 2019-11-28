@@ -31,7 +31,7 @@
             this.timers[event] = setTimeout(_ => {
                 delete(this.timers[event]);
                 this.handleEvent(event)
-            }, timeout)
+            }, timeout);
         }
         cancelTimer(timername) {
             if (timername in this.timers) {
