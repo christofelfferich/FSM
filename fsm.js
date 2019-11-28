@@ -11,7 +11,7 @@
      /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
      *  Standalone, JavaScript implementation of a Finite State Machine.  *
      *  Copyright (c) 2010-2019,                                          *
-     *  Christoffel Elfferich                      all rights preserved.  *
+     *  Christof Elfferich                         all rights preserved.  *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     class Fsm {
         constructor(statetable) {
