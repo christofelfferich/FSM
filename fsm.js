@@ -13,7 +13,7 @@
      *  Copyright (c) 2010-2019,                                          *
      *  Christof Elfferich                         all rights preserved.  *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    class Fsm {
+    return class Fsm {
         constructor(statetable) {
             for (const [k, v] of Object.entries(statetable)) {
                 this[k] = v;
@@ -40,5 +40,4 @@
             }
         };
     };
-    return Fsm;
 });
