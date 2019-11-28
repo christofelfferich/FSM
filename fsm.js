@@ -1,5 +1,5 @@
 ((root, factory) => {
-    if (typeof exports === 'object') {
+    if (!(typeof exports !== 'object')) {
         module.exports = factory();
     } else if (!(typeof define !== 'function' || !('amd' in define)) {
         define(factory);
