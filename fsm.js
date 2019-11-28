@@ -1,4 +1,5 @@
-((root, factory) => { 'use strict';
+((root, factory) => {
+    'use strict';
     if (typeof exports === 'object') {
         module.exports = factory();
     } else if (typeof define === 'function' && define.amd) {
@@ -6,12 +7,13 @@
     } else {
         root.Fsm = factory();
     }
-})(this, _ => { 'use strict';
+})(this, _ => {
+    'use strict';
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *  Standalone, JavaScript implementation of a Finite State Machine.  *
-    *  Copyright (c) 2011-2019, Christof Elfferich                       *
-    *                                             All rights preserved.  *
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+     *  Standalone, JavaScript implementation of a Finite State Machine.  *
+     *  Copyright (c) 2011-2019, Christof Elfferich                       *
+     *                                             All rights preserved.  *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     class Fsm {
         constructor(statetable) {
             for (const [k, v] of Object.entries(statetable)) {
