@@ -10,7 +10,7 @@
     'use strict';
      /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
      *  Standalone, JavaScript implementation of a Finite State Machine.  *
-     *  Copyright (c) 2010-2019,                                          *
+     *  Copyright (c) 2010-2021,                                          *
      *  Christof Elfferich                         all rights preserved.  *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     return class Fsm {
