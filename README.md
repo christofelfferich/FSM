@@ -1,2 +1,2 @@
 # FSM.js
-JavaScript implementation of the 'finite-state' computational model.
+JavaScript implementation of a 'finite-state' computational model.
